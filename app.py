@@ -4,8 +4,8 @@ st.title('Simulador de créditos')
 
 rate_type = st.selectbox("Tipo de tasa", ("Mensual", "Anual"))
 amount = st.number_input(
-    "Valor del préstamo",
-    value=100_000_000,
+    "Valor del préstamo en millones",
+    value=100,
     min_value=0,
     format="%d",
 )
@@ -35,6 +35,7 @@ if rate_type == "Anual":
     rate = (1 + rate) ** (1 / 12) - 1
 
 #years = 12 * years
+amount *= 1e6 
 
 result = (rate * amount) / (1 - (1 / (1 + rate) ** months))
 
