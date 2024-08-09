@@ -18,7 +18,7 @@ amount = st.number_input(
 rate = st.number_input(
     "Tasa de interés (Ej: 10, 15, 0.5)",
     value=0.833,
-    step=0.001,
+    step=0.1,
     min_value=0.0,
     format="%f",
 )
