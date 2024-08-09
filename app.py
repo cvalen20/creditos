@@ -2,7 +2,13 @@ import streamlit as st
 
 st.title('Simulador de créditos')
 
-rate_type = st.selectbox("Tipo de tasa", ("Mensual", "Anual"))
+# rate_type = st.selectbox("Tipo de tasa", ("Mensual", "Anual"))
+
+rate_type = st.radio(
+    "Tipo de tasa",
+    ["Mensual", "Anual"]
+)
+
 amount = st.number_input(
     "Valor del préstamo en millones",
     value=100,
